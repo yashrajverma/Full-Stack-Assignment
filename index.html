@@ -2,108 +2,180 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Practical 6</title>
+    <title>Practical-7</title>
+    <meta name="viewport" content="width=device-width initial scale=1.0"/>
     <style>
-        *{
+        * {
             box-sizing: border-box;
+            font-family: SansSerif, sans-serif;
         }
-        .card{
-            background-color: white;
-            float: left;
-            border-radius: 15px;
-            box-shadow: 0px 3px 25px 5px rgba(0,0,0,0.5);
-            padding: 10px;
-            margin: 25px;
-            height: 100%;
-            width: 21.5%;
-            border: 0.7px solid gray;
-        }
-        .container{
-            height: 100%;
-            width: 100%;
-            justify-content: center;
-        }
-        img{
-            justify-content: center;
-            width: 100%;
-            height: 220px;
-            border-radius: 15px;
-            box-shadow: 0px 3px 10px 2px rgba(0,0,0,0.5);
-            padding: 0;
-            margin: 0;
-            border: 0.7px solid gray;
-        }
-        h2{
-            font-weight: bold;
-            text-align: center;
-            color: black;
-            font-size: 1.8rem;
-        }
-        .clearfix{
-            display: inline-block;
-            clear: both;
+
+        .clearfix {
+            display: table;
             content: "";
+            clear: both;
         }
-        body{
-            background-color: #F1F1F1;
+
+        body {
+            margin: 0;
+            padding: 0;
         }
-        a{
-            text-decoration: none;
-        }
-        button{
-            color: white;
-            background-color: orange;
-            border: none;
-            font-size: 30px;
+
+        .header {
             width: 100%;
-            border-radius: 10px;
+            height: 50px;
+            background-color: gray;
+            color: white;
+            text-align: center;
+        }
+
+        .header p {
+            margin: auto 0;
+            font-weight: bold;
+        }
+
+        .page {
+            background-color: aqua;
+            color: white;
+            height: 80vh;
+            width: 100%;
+            margin: 0;
+        }
+
+        .page > h1 {
+            text-align: center;
+            margin: auto auto;
 
         }
-        button:hover{
-            background-color: blue;
+
+        .h1 {
+            text-align: center;
+            color: black;
+            font-size: 1.2em;
+            text-shadow: 0px 10px 10px rgba(0,0,0,0.2);
+        }
+
+        .circle_image {
+            width: 100%;
+            height: 300px;
+            margin-bottom: 100px;
+            float: left;
+            justify-content: space-evenly;
+        }
+
+        .circle-img {
+            background-color: orange;
+            border-radius: 50%;
+            height: 100%;
+            width: 22.5%;
+            box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+            content: '';
+            float: inherit;
+            margin: 16px;
+        }
+
+        .content {
+            margin-bottom: 50px;
+            width: 100%;
+            height: 300px;
+            float: left;
+            display: table;
+            padding: 10px;
+            overflow: auto;
+        }
+        .main-content {
+            width: 50%;
+            height: 100%;
+            background-color: black;
+            color: white;
+            text-align: center;
+            float: inherit;
+            position: relative;
+        }
+        .main-content h2{
+            margin: auto;
+        }
+        .articles {
+            width: 50%;
+            height: 100%;
+            float: inherit;
+            position: relative;
+        }
+        .art {
+            height: 33.3%;
+            margin: 10px;
+            border: 1px solid brown;
+            background-color: saddlebrown;
+            text-align: center;
+            color: white;
+        }
+        .square{
+            background-color: darkred;
+            margin: 20px;
+            width: 22%;
+            height: 100%;
+            float: inherit;
+            display: inherit;
+            position: relative;
+        }
+        footer{
+            background-color: gray;
+            color: white;
+            width: 100%;
+            height: 100px;
+            text-align: center;
+            justify-content: center;
+        }
+        .centered{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        #h2{
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
         }
     </style>
+
 </head>
 <body>
-<h1>Practical - 6: To Create the following Layout using Css Layout Properties.</h1>
-<div class="clearfix">
-    <div class="card">
-        <div class="container">
-            <img src="image/html.jpg" alt="image"/>
-            <h2>Html</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, enim.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, enim.</p>
-        </div>
-        <a href="praticals/practical5-html.html"><button>Read More</button></a>
-    </div>
-    <div class="card">
-        <div class="container">
-            <img src="image/css.jpg" alt="image"/>
-            <h2>CSS</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, enim.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, enim.</p>
-            <a href="praticals/practical5-css.html"><button>Read More</button></a>
-        </div>
-    </div>
-    <div class="card">
-        <div class="container">
-            <img src="image/js.jpg" alt="image"/>
-            <h2>JavaScript</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, enim.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, enim.</p>
-            <a href="praticals/practical5-js.html"><button>Read More</button></a>
-        </div>
-    </div>
-    <div class="card">
-        <div class="container">
-            <img src="image/bootstrap.jpg" alt="image"/>
-            <h2>Bootstrap</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, enim.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, enim.</p>
-            <a href="praticals/practical5-bs.html"><button>Read More</button></a>
-        </div>
+<div class="header"><p >Header</p></div>
+<div class="page"><h1 class="centered">Practical-7</h1></div>
+<!-----------------------------------------  Section -1 ----------------------------------->
+<div class="h1"><h1>Section-1</h1></div>
+<div class="circle_image">
+    <div class="circle-img"></div>
+    <div class="circle-img"></div>
+    <div class="circle-img"></div>
+    <div class="circle-img"></div>
+</div>
+<!-----------------------------------------  Section -2 ----------------------------------->
+
+<div class="h1"><h1>Section-2</h1></div>
+<div class="content">
+    <div class="main-content "><h2 id="h2">Main-Content</h2></div>
+    <div class="articles">
+        <div class="art"><h2>Article-1</h2></div>
+        <div class="art"><h2>Article-2</h2></div>
+        <div class="art"><h2>Article-3</h2></div>
     </div>
 </div>
 
+<!-----------------------------------------  Section -3 ----------------------------------->
+<div class="h1"><h1>Section-3</h1></div>
+<div class="content">
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+</div>
+
+<!-----------------------------------------  Section -4 ----------------------------------->
+<div class="h1"><h1>Section-4</h1></div>
+<footer><h1>Footer</h1></footer>
 </body>
 </html>
