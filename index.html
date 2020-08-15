@@ -4,180 +4,121 @@
     <meta charset="UTF-8">
     <title>Practical-7</title>
     <meta name="viewport" content="width=device-width initial scale=1.0"/>
-    <style>
-        * {
-            box-sizing: border-box;
-            font-family: SansSerif, sans-serif;
-        }
-
-        .clearfix {
-            display: table;
-            content: "";
-            clear: both;
-        }
-
-        body {
-            margin: 0;
-            padding: 0;
-        }
-
-        .header {
-            width: 100%;
-            height: 50px;
-            background-color: gray;
-            color: white;
-            text-align: center;
-        }
-
-        .header p {
-            margin: auto 0;
-            font-weight: bold;
-        }
-
-        .page {
-            background-color: aqua;
-            color: white;
-            height: 80vh;
-            width: 100%;
-            margin: 0;
-        }
-
-        .page > h1 {
-            text-align: center;
-            margin: auto auto;
-
-        }
-
-        .h1 {
-            text-align: center;
-            color: black;
-            font-size: 1.2em;
-            text-shadow: 0px 10px 10px rgba(0,0,0,0.2);
-        }
-
-        .circle_image {
-            width: 100%;
-            height: 300px;
-            margin-bottom: 100px;
-            float: left;
-            justify-content: space-evenly;
-        }
-
-        .circle-img {
-            background-color: orange;
-            border-radius: 50%;
-            height: 100%;
-            width: 22.5%;
-            box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
-            display: inline-block;
-            content: '';
-            float: inherit;
-            margin: 16px;
-        }
-
-        .content {
-            margin-bottom: 50px;
-            width: 100%;
-            height: 350px;
-            float: left;
-            display: table;
-            padding: 10px;
-            overflow: auto;
-        }
-        .main-content {
-            width: 50%;
-            height: 100%;
-            background-color: black;
-            color: white;
-            text-align: center;
-            float: inherit;
-            position: relative;
-            padding: 10px;
-        }
-
-        .articles {
-            width: 50%;
-            height: 100%;
-            float: inherit;
-            position: relative;
-            margin: 0;
-            padding: 0;
-        }
-        .art {
-            margin-bottom: 5px;
-            margin-left: 5px;
-            height: 32%;
-            border: 1px solid brown;
-            background-color: saddlebrown;
-            text-align: center;
-            color: white;
-        }
-        .square{
-            background-color: darkred;
-            margin: 20px;
-            width: 22%;
-            height: 100%;
-            float: inherit;
-            display: inherit;
-            position: relative;
-        }
-        footer{
-            background-color: gray;
-            color: white;
-            width: 100%;
-            height: 100px;
-            text-align: center;
-            justify-content: center;
-        }
-        .centered{
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-        #h2{
-            position: relative;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,-50%);
-        }
-    </style>
+    <link href="css/p8.css" rel="stylesheet">
+    <link href="css/p6.css" rel="stylesheet">
 
 </head>
 <body>
-<div class="header"><p >Header</p></div>
-<div class="page"><h1 class="centered">Practical-7</h1></div>
+<div >
+    <nav>
+        <ul>
+            <li><a class="active" href="#banner">Home</a></li>
+            <li><a href="#about_us">About Us</a></li>
+            <li><a href="#teamember">Team</a></li>
+            <li><a href="#tech">Technologies</a></li>
+            <li><a href="#contact_">Contact</a></li>
+        </ul>
+    </nav>
+</div>
+
+<div class="page" id="banner"><h1 class="centered">Practical-7</h1></div>
 <!-----------------------------------------  Section -1 ----------------------------------->
-<div class="h1"><h1>Section-1</h1></div>
-<div class="circle_image">
-    <div class="circle-img"></div>
-    <div class="circle-img"></div>
-    <div class="circle-img"></div>
-    <div class="circle-img"></div>
+<div class="h1"><h1>Team Members</h1></div>
+<div class="circle_image" id="teamember">
+    <ul>
+        <li><img src="image/1.png"></li>
+        <li><img src="image/2.png"></li>
+        <li><img src="image/3.png"></li>
+        <li><img src="image/9.png"></li>
+    </ul>
 </div>
 <!-----------------------------------------  Section -2 ----------------------------------->
 
-<div class="h1"><h1>Section-2</h1></div>
-<div class="content">
-    <div class="main-content"><h2 id="h2">Main-Content</h2></div>
+<div class="h1"><h1>About Us</h1></div>
+<div class="content" id="about_us">
+    <div class="main-content">
+        <h2 style="color: white">About Projects</h2>
+        <p id="h2">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi consequatur fugit harum hic
+            quae reprehenderit sapiente tempora ut veniam vitae.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam debitis dolores error magni odio quam quia
+            recusandae totam ut vel?
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi consequatur fugit harum hic
+            quae reprehenderit sapiente tempora ut veniam vitae.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam debitis dolores error magni odio quam quia
+            recusandae totam ut vel?
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi consequatur fugit harum hic
+            quae reprehenderit sapiente tempora ut veniam vitae.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam debitis dolores error magni odio quam quia
+            recusandae totam ut vel? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam debitis</p></div>
     <div class="articles">
-        <div class="art"><h2>Article-1</h2></div>
-        <div class="art"><h2>Article-2</h2></div>
-        <div class="art"><h2>Article-3</h2></div>
+        <div class="art-1">Project-1</div>
+        <div class="art-2">Project-2</div>
+        <div class="art-3">Project-3</div>
     </div>
 </div>
 
 <!-----------------------------------------  Section -3 ----------------------------------->
-<div class="h1"><h1>Section-3</h1></div>
-<div class="content">
-    <div class="square"></div>
-    <div class="square"></div>
-    <div class="square"></div>
-    <div class="square"></div>
+<div class="h1"><h1>Technologies Used</h1></div>
+
+<div class="clearfix" id="tech">
+    <div class="card">
+        <div class="container">
+            <img alt="image" src="image/html.jpg"/>
+            <h2>Html</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, enim.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, enim.</p>
+        </div>
+        <a href="praticals/practical5-html.html">
+            <button class="button">Read More</button>
+        </a>
+    </div>
+    <div class="card">
+        <div class="container">
+            <img alt="image" src="image/css.jpg"/>
+            <h2>CSS</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, enim.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, enim.</p>
+            <a href="praticals/practical5-css.html">
+                <button class="button">Read More</button>
+            </a>
+        </div>
+    </div>
+    <div class="card">
+        <div class="container">
+            <img alt="image" src="image/js.jpg"/>
+            <h2>JavaScript</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, enim.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, enim.</p>
+            <a href="praticals/practical5-js.html">
+                <button class="button">Read More</button>
+            </a>
+        </div>
+    </div>
+    <div class="card">
+        <div class="container">
+            <img alt="image" src="image/bootstrap.jpg"/>
+            <h2>Bootstrap</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, enim.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, enim.</p>
+            <a href="praticals/practical5-bs.html">
+                <button class="button">Read More</button>
+            </a>
+        </div>
+    </div>
 </div>
 
+
 <!-----------------------------------------  Section -4 ----------------------------------->
-<div class="h1"><h1>Section-4</h1></div>
-<footer><h1>Footer</h1></footer>
+<div class="h1"><h1>Contact Us</h1></div>
+<footer id="contact_">
+
+    <div>
+        <h2>Connect with me @<a href="https://github.com/yashrajverma/" style="text-decoration: none;">Github</a></h2>
+    </div>
+    <div>
+        <p>Website Template for Pratical-8</p>
+    </div>
+</footer>
 </body>
 </html>
