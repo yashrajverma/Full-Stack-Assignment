@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Table</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        min-width: 100%;
+        background-color: lightgrey;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .wrapper {
+        width: 600px;
+        background-color: #fff;
+        padding: 10px;
+        margin: 20px auto;
+    }
+
+    .custom-table {
+        width: 100%;
+        margin: 0 auto;
+        border-collapse: collapse;
+
+    }
+
+    .basic {
+        background-color: #c1dcb7;
+    }
+
+    .plus {
+        background-color: #bad6c8;
+    }
+
+    .delux {
+        background-color: #bbd3dc;
+    }
+
+    .pro {
+        background-color: #d5e4bc;
+    }
+
+    .custom-table td, .custom-table th {
+        width: 150px;
+        padding: 8px 5px;
+        text-align: center;
+        border-right: 2px solid white;
+        border-left: 2px solid white;
+    }
+
+    .custom-table th {
+        height: 70px;
+        color: #64548f;
+        font-size: 28px;
+
+    }
+
+    span {
+        font-size: 28px;
+        color: #64548f;
+        margin-right: 10px;
+    }
+
+    tbody tr:nth-child(odd), tfoot tr:nth-child(even) {
+        background-color: #edf3e2;
+    }
+
+    tfoot tr {
+        line-height: 70px;
+    }
+
+    a {
+        text-decoration: none;
+        background-color: #64548f;
+        padding: 7px 20px;
+        color: white;
+        border-radius: 10px;
+        font-size: 18px;
+        margin: 10px;
+        vertical-align: middle;
+    }
+
+    a:hover {
+        color: red;
+        background-color: yellow;
+    }
+
+    h2 {
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    tbody tr:first-child {
+        font-size: 20px;
+        color: green;
+    }
+</style>
+<body>
+<table>
+    <!-- <caption>Full Stack Report</caption> -->
+    <tr>
+        <th colspan="5" id="topic">FullStack Live Practical Book</th>
+    </tr>
+    <tr>
+        <th>Sr.No</th>        <!--table heading-->
+        <th>Practical Name</th>
+        <th>Link</th>
+        <th>Status</th>
+        <th>Tools</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Create a Web page including HTML basic skeleton using Offline HTML Editor and Online Sandbox Enviroment</td>
+        <td><a href="praticals/p1.html" target="_blank">Practical-1</a></td>
+        <td><span class="delivered">Checked</span></td>
+        <td><i class="material-icons edit">edit</i><i class="material-icons delete">delete</i></td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td> Live your First Web-Page on Git-Hub.</td>
+        <td><a href="praticals/p2.html" target="_blank">Practical-2</a></td>
+        <td><span class="delivered">Checked</span></td>
+        <td><i class="material-icons edit">edit</i><i class="material-icons delete">delete</i></td>
+    </tr>
+
+    <tr>
+        <td>3</td>
+        <td>Create a web page showing a basic html structure using character Entities and span Tag.</td>
+        <td><a href="praticals/p3.html" target="_blank">Practical-3</a></td>
+        <td><span class="delivered">Checked</span></td>
+        <td><i class="material-icons edit">edit</i><i class="material-icons delete">delete</i></td>
+    </tr>
+
+    <tr>
+        <td>4</td>
+        <td>Create a website having list of all practical and their indivisual practical Page links.</td>
+        <td><a href="praticals/p5.html" target="_blank">Practical-4</a></td>
+        <td><span class="delivered">Checked</span></td>
+        <td><i class="material-icons edit">edit</i><i class="material-icons delete">delete</i></td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td> Create a Web-Page showing the use of Image-Map in the Web Application.</td>
+        <td><a href="praticals/p5.html" target="_blank">Practical-5</a></td>
+        <td><span class="delivered">Checked</span></td>
+        <td><i class="material-icons edit">edit</i><i class="material-icons delete">delete</i></td>
+    </tr>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td>Create following layout using CSS layout property.</td>
+        <td><a href="praticals/p6.html" target="_blank">Practical-6</a></td>
+        <td><span class="delivered">Checked</span></td>
+        <td><i class="material-icons edit">edit</i><i class="material-icons delete">delete</i></td>
+    </tr>
+
+    <tr>
+        <td>7</td>
+        <td>Create a Web Page Layout using div tags.</td>
+        <td><a href="praticals/p7.html" target="_blank">Practical-7</a></td>
+        <td><span class="delivered">Checked</span></td>
+        <td><i class="material-icons edit">edit</i><i class="material-icons delete">delete</i></td>
+    </tr>
+
+    <tr>
+        <td>8</td>
+        <td>Create a webpage having Fixed Navigation Bar and given content.</td>
+        <td><a href="praticals/practical8.html" target="_blank">Practical-8</a></td>
+        <td><span class="delivered">Checked</span></td>
+        <td><i class="material-icons edit">edit</i><i class="material-icons delete">delete</i></td>
+    </tr>
+
+    <tr>
+        <td>9</td>
+        <td>Create a Responsive Web Layout with Responsive Navigation Bar.</td>
+        <td><a href="praticals/practical-9.html" target="_blank">Practical-9</a></td>
+        <td><span class="delivered">Checked</span></td>
+        <td><i class="material-icons edit">edit</i><i class="material-icons delete">delete</i></td>
+    </tr>
+
+    <tr>
+        <td>10</td>
+        <td>Create a Responsive Side-Bar Navigation Menu.</td>
+        <td><a href="praticals/practical-10.html" target="_blank">Practical-10</a></td>
+        <td><span class="delivered">Checked</span></td>
+        <td><i class="material-icons edit">edit</i><i class="material-icons delete">delete</i></td>
+    </tr>
+
+    <!--    <tr>-->
+    <!--        <td>11</td>-->
+    <!--        <td>Create a Table that represent Live Practical Book Records .</td>-->
+    <!--        <td><a href="../HTML/practical-11.html" target="_blank">Practical-11</a></td>-->
+    <!--        <td><span class="pending">Un-Checked</span></td>-->
+    <!--        <td><i class="material-icons edit">edit</i><i class="material-icons delete">delete</i></td></tr>-->
+    <!--    </tr>-->
+    <!-- <tr class="last">
+        <td>12</td>
+        <td>Create a Custom Price Table Template.</td>
+        <td><a href="../HTML/practical-12.html" target="_blank">Practical-12</a></td>
+        <td><span class="pending">Un-Checked</span></td>
+        <td><i class="material-icons edit">edit</i><i class="material-icons delete">delete</i></td>
+    </tr> -->
+</table>
+</body>
+</html>
