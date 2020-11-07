@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>Practical 15</title>
+    <style>
+        #div {
+            display: flex;
+            flex: auto;
+            flex-direction: column;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+<h1>Counter</h1>
+<table>
+    <td>
+        <button id="plus" onclick="pluss()"><span>+</span></button>
+    </td>
+    <td>
+        <p id="ptag" style="margin-left: 10px;margin-right: 10px"></p>
+    </td>
+    <td>
+        <button id="minus" onclick="minuss()"><span>-</span></button>
+    </td>
+</table>
+
+<script>
+    var count = 0;
+
+    function pluss() {
+        document.getElementById('ptag').innerHTML = ++count;
+    }
+
+    function minuss() {
+        if (count == 0) {
+            document.getElementById('ptag').innerHTML = "Cannot reduce below " + count;
+        } else {
+            document.getElementById('ptag').innerHTML = --count;
+        }
+    }
+</script>
+</body>
+</html>
