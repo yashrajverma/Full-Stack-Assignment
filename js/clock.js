@@ -76,7 +76,6 @@ function getGreeting() {
 function getName() {
     if (localStorage.getItem("myData") === null) {
         name.innerHTML = "[Enter Name]";
-
     } else {
         name.innerHTML = localStorage.getItem('myData');
     }
