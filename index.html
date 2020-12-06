@@ -1,33 +1,202 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-          name="viewport">
-    <meta content="ie=edge" http-equiv="X-UA-Compatible">
-    <title>Practical-20 Bootstrap layout</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>JS MultiPage Form</title>
+    <style>
+        @import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: rgb(73, 72, 72);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 360px;
+            height: 420px;
+            background-color: #fff;
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container form {
+            width: 280px;
+            position: absolute;
+            left: 40px;
+            top: 80px;
+            transition: 0.5s;
+        }
+
+        form h3 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #777;
+        }
+
+        form input {
+            width: 100%;
+            padding: 10px 5px;
+            margin: 5px 0px;
+            border: none;
+            outline: none;
+            border-bottom: 1px solid #777;
+            background: transparent;
+        }
+
+        .btn-box {
+            margin-top: 70px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        form button {
+            width: 120px;
+            height: 35px;
+            background-color: rgb(13, 173, 173);
+            color: white;
+            border-radius: 10px;
+            outline: none;
+            border: none;
+        }
+
+        #form2 {
+            left: 450px;
+        }
+
+        #form3 {
+            left: 450px;
+        }
+
+        .step-row {
+            width: 360px;
+            height: 40px;
+            box-shadow: 0px -1px 5px -1px;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .step-col {
+            width: 120px;
+            text-align: center;
+            color: #000;
+            z-index: 1;
+        }
+
+        #progress {
+            width: 120px;
+            height: 100%;
+            position: absolute;
+            background-color: rgb(13, 173, 173);
+            transition: 1s;
+        }
+
+        #progress::after {
+            content: '';
+            width: 0px;
+            height: 0px;
+            position: absolute;
+            border-top: 20px solid transparent;
+            border-bottom: 20px solid transparent;
+            right: -20px;
+            border-left: 20px solid rgb(13, 173, 173);
+        }
+    </style>
 </head>
+
 <body>
-<div style="background-color: teal;width: 100%;height: 70px">
-</div>
-<div class="row">
-    <div class="col-md-6 col-sm-12 col-lg-6" style="background-color: orange;height: 400px">
-    </div>
-    <div class="col-md-6 col-sm-12 col-lg-6">
-        <div class="row">
-            <div class="col-sm-6 col-md-6 col-lg-6" style="background-color:blue;height: 200px;width: 100%">
-
-            </div>
-            <div class="col-sm-6 col-md-6 col-lg-6" style="background-color:red;width: 100%;height: 200px">
-            </div>
+<div class="container">
+    <form id="form1">
+        <h3>CREATE ACCOUNT</h3>
+        <input placeholder="Enter Email" type="text">
+        <input placeholder="Enter Password" type="text">
+        <input placeholder="Confirm Password" type="text">
+        <div class="btn-box">
+            <button id="next1" type="button">Next</button>
         </div>
-    </div>
-</div>
-<footer class="col-lg-12 col-md-12 col-sm-12" style="width: 100%;height: 70px;background-color: black">
+    </form>
 
-</footer>
+    <form id="form2">
+        <h3>SOCIAL LINKS</h3>
+        <input placeholder="Linkdin" type="text">
+        <input placeholder="Github" type="text">
+        <input placeholder="Facebook" type="text">
+        <div class="btn-box">
+            <button id="back1" type="button">Back</button>
+            <button id="next2" type="button">Next</button>
+        </div>
+    </form>
+
+    <form id="form3">
+        <h3>PERSONAL INFORMATION</h3>
+        <input placeholder="First Name" type="text">
+        <input placeholder="Last Name" type="text">
+        <input placeholder="Mobile No." type="text">
+        <div class="btn-box">
+            <button id="back2" type="button">Back</button>
+            <button type="button">Submit</button>
+        </div>
+    </form>
+
+    <div class="step-row">
+        <div id="progress"></div>
+        <div class="step-col"><small>Step-1</small></div>
+        <div class="step-col"><small>Step-2</small></div>
+        <div class="step-col"><small>Step-3</small></div>
+    </div>
+
+
+</div>
+</div>
+<script>
+    const form1 = document.getElementById('form1');
+    const form2 = document.getElementById('form2');
+    const form3 = document.getElementById('form3');
+
+    const next1 = document.getElementById('next1');
+    const next2 = document.getElementById('next2');
+    const back1 = document.getElementById('back1');
+    const back2 = document.getElementById('back2');
+
+    const progress = document.getElementById('progress');
+
+    next1.onclick = function () {
+        form1.style.left = '-450px';
+        form2.style.left = '40px';
+        progress.style.width = '240px';
+    }
+
+    back1.onclick = function () {
+        form1.style.left = '40px';
+        form2.style.left = '450px';
+        progress.style.width = '120px';
+    }
+
+    next2.onclick = function () {
+        form2.style.left = '-450px';
+        form3.style.left = '40px';
+        progress.style.width = '360px';
+    }
+
+    back2.onclick = function () {
+        form2.style.left = '40px';
+        form3.style.left = '450px';
+        progress.style.width = '240px';
+    }
+</script>
 </body>
+
 </html>
