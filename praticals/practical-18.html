@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Practical-18</title>
+    <link href="../css/practical-18.css" rel="stylesheet"/>
+    <link
+            crossorigin="anonymous"
+            href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+            integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+            rel="stylesheet"
+    />
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <form id="form">
+        <h1>Create Account</h1>
+        <div class="name">
+            <input
+                    class="input"
+                    id="username"
+                    placeholder="Username"
+                    type="text"
+            />
+            <i class="fa fa-exclamation-triangle" id='name-fails' style="color:red"></i>
+            <i class="fa fa-check-circle" id='name-check' style="color:green"></i>
+        </div>
+        <small id="user-msg">* njejfwef </small>
+        <div class="email">
+            <input class="input" id="email" placeholder="Email" type="text"/>
+            <i class="fa fa-exclamation-triangle" id='email-fails' style="color:red"></i>
+            <i class="fa fa-check-circle" id='email-check' style="color:green"></i>
+        </div>
+        <small id="email-error">* njejfwef</small>
+        <div class="password">
+            <input
+                    class="input"
+                    id="password"
+                    placeholder="Password"
+                    type="password"
+            />
+            <i class="fa fa-exclamation-triangle" id='password-fails' style="color:red"></i>
+            <i class="fa fa-check-circle" id='password-check' style="color:green"></i>
+        </div>
+        <small id="pass-error">* njejfwef </small>
+        <div class="confirm-password">
+            <input
+                    class="input"
+                    id="confirm-password"
+                    placeholder="Confirm Password"
+                    type="password"
+            />
+            <i class="fa fa-exclamation-triangle" id='confirm-fails' style="color:red"></i>
+            <i class="fa fa-check-circle" id='confirm-check' style="color:green"></i>
+        </div>
+        <small id="confirm-error">* njejfwef </small>
+        <button id="submit-btn">Submit</button>
+    </form>
+</div>
+<script src="../js/practical-18.js"></script>
+</body>
+
+</html>
